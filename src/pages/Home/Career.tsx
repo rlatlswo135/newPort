@@ -3,22 +3,24 @@ import tw from "tailwind-styled-components";
 import { CAREER_INFO } from "@/constants";
 
 export const Career = () => {
+  if (!CAREER_INFO.length) return <div>Error</div>;
+
   return (
-    <Container>
+    <>
       {CAREER_INFO.map((item) => {
         const { company, date, work } = item;
         return (
-          <>
-            <div>
+          <Container key={`company-${company}`}>
+            <CompanyWrap>
               <Company>{company}</Company>
               <Date>{date}</Date>
-            </div>
-            <div>
+            </CompanyWrap>
+            <WorkWrap>
               <WorkTitle>{work.title}</WorkTitle>
               {work.list.map((item) => {
                 const { des, subDes, link } = item;
                 return (
-                  <DesWrap>
+                  <DesWrap key={`des-${des}`}>
                     <Des>
                       {`- ${des} `}
                       {link && (
@@ -29,27 +31,33 @@ export const Career = () => {
                     </Des>
                     {subDes &&
                       subDes.map((item) => (
-                        <SubDes des={item}>{item.replace("!!", "")}</SubDes>
+                        <SubDes key={`subDes-${item}`} des={item}>
+                          {item.replace("!!", "")}
+                        </SubDes>
                       ))}
                   </DesWrap>
                 );
               })}
-            </div>
-          </>
+            </WorkWrap>
+          </Container>
         );
       })}
-    </Container>
+    </>
   );
 };
 
 const Container = tw.div`
-flex justify-between pr-20
+flex justify-between lg:justify-start
 `;
+const CompanyWrap = tw.div`
+lg:mr-20
+`;
+const WorkWrap = tw.div``;
 const Company = tw.p`
 text-xl font-bold
 `;
 const Date = tw.span`
-text-sm text-sub
+text-sm text-sub font-bold
 `;
 const WorkTitle = tw.p`
 font-bold text-lg

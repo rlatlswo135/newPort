@@ -44,12 +44,12 @@ export const Header = React.memo(() => {
 });
 
 const Container = tw.nav`
-border-b-1 bg-light py-1
+border-b-1 bg-light py-1 sticky top-0
 dark:bg-dark
 `;
 
 const Menus = tw.ul`
-h-12 sticky top-0 flex justify-evenly
+h-12 flex justify-evenly
 dark:text-white
 `;
 

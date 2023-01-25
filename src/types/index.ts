@@ -40,3 +40,11 @@ export type Career = {
   date: string;
   work: Work;
 };
+
+export type SkillInfo = {
+  type: string;
+  content: string[];
+};
+export type SkillIcons = {
+  [key: string]: string;
+};

@@ -1,4 +1,4 @@
-import { Career, Profile, Project } from "@/types";
+import { Career, Profile, Project, SkillIcons, SkillInfo } from "@/types";
 
 // 프로필정보
 export const PROFILE_INFO: Profile = {
@@ -13,6 +13,7 @@ export const PROFILE_INFO: Profile = {
   ],
 };
 
+// 프로젝트 정보
 export const PROJECT_INFO: Project[] = [
   {
     title: "Toy Chat",
@@ -39,10 +40,11 @@ export const PROJECT_INFO: Project[] = [
   },
 ];
 
+// 경력 정보
 export const CAREER_INFO: Career[] = [
   {
     company: "온피아",
-    date: "2022.06 ~ 2022.12",
+    date: "2022.06 ~ 2023.01",
     work: {
       title: "신규 프로젝트 Synaptory 개발 및 유지보수",
       list: [
@@ -69,3 +71,30 @@ export const CAREER_INFO: Career[] = [
     },
   },
 ];
+
+// 기술 정보
+export const SKILL_INFO: SkillInfo[] = [
+  { type: "Language", content: ["JavaScript", "TypeScript"] },
+  { type: "Libs", content: ["React", "Redux", "Redux-Saga"] },
+  { type: "Test", content: ["PlayWright"] },
+];
+
+const DEFAULT_ICON =
+  "https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1567001196/noticon/aziehs8hf3w3kwinelzf.png";
+
+// 아이콘 정보
+export const SKILL_ICONS: SkillIcons = {
+  TypeScript:
+    "https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1566913457/noticon/eh4d0dnic4n1neth3fui.png",
+  JavaScript:
+    "https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1567008394/noticon/ohybolu4ensol1gzqas1.png",
+  Redux:
+    "https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1566919941/noticon/bwij1af50rjj0fiyjtci.png",
+  "Redux-Saga":
+    "https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1613067441/noticon/nusn2zkdp60e7ee90wdi.png",
+  React:
+    "https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1566557331/noticon/d5hqar2idkoefh6fjtpu.png",
+  Firebase:
+    "https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1566913958/noticon/uoqjdixts4lwsgtsa1pd.png",
+  PlayWright: DEFAULT_ICON,
+};

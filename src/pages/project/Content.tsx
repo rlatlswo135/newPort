@@ -84,5 +84,5 @@ const Type = tw.p`
 text-gray-400 font-bold
 `;
 const Repo = tw.a`
-flex pt-2 hover:border-b-1
+flex pt-2 hover:text-header
 `;

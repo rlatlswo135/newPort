@@ -1,34 +1,38 @@
-import React from "react";
+import React, { useMemo } from "react";
 import tw from "tailwind-styled-components";
 import { Career } from "./Career";
 import { Content } from "./Content";
 import { Info } from "./Info";
+import { Intro } from "./Intro";
+import { Skill } from "./Skill";
 
 export const Home = () => {
+  const homeContent = useMemo(
+    () => [
+      { title: "Intro", render: <Intro /> },
+      { title: "Career", render: <Career /> },
+      { title: "Skill", render: <Skill /> },
+    ],
+    []
+  );
+
   return (
     <Container className="dark:text-white">
       <Info />
       {/* 소개글 */}
-      <Content title="Info.">
-        <p>소개글</p>
-      </Content>
-      <Content title="Career.">
-        <Career />
-      </Content>
-      <Content title="Skill.">
-        <p>스킬</p>
-      </Content>
-      <Content title="Education.">
-        <p>경력</p>
-      </Content>
-      <Content title="Others.">
-        <p>경력</p>
-      </Content>
+      {homeContent.map((content) => {
+        const { title, render } = content;
+        return (
+          <Content title={title} key={`homeContent-${title}`}>
+            {render}
+          </Content>
+        );
+      })}
     </Container>
   );
 };
 
 const Container = tw.div`
-px-72 pt-32 pb-24
+px-72 py-32 h-full
 dark:bg-dark dark:text-white
 `;
