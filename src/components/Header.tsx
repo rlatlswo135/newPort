@@ -2,11 +2,7 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import tw from "tailwind-styled-components";
 import { MdDarkMode, MdWbSunny } from "react-icons/md";
 import { Link } from "react-router-dom";
-
-type NavInfo = {
-  path: string;
-  text: string;
-};
+import { NavInfo } from "@/types";
 
 export const Header = React.memo(() => {
   const [darkMode, setDarkMode] = useState<boolean>(false);

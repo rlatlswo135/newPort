@@ -1,6 +1,6 @@
 import tw from "tailwind-styled-components";
 import React from "react";
-import { ProfileInfo } from "@/constants";
+import { ProfileInfo } from "@/types";
 
 type InfoContentType = {
   mainTitle: string;
@@ -13,7 +13,7 @@ export const InfoContent = ({ mainTitle, values }: InfoContentType) => {
       {values.map((item) => {
         const { type, value } = item;
         return (
-          <Content className="flex">
+          <Content className="flex" key={`info-${type}`}>
             <Type>{type}</Type>
             <Link
               href={type === "Email" ? `mailto:${value}` : `https://${value}`}
@@ -29,14 +29,14 @@ export const InfoContent = ({ mainTitle, values }: InfoContentType) => {
   );
 };
 
-const Container = tw.p``;
+const Container = tw.div``;
 const Title = tw.p`
 text-2xl mb-2 text-header font-bold   
 `;
-const Content = tw.p`
+const Content = tw.div`
 flex
 `;
 const Type = tw.p``;
 const Link = tw.a`
-ml-2 text-gray-400    
+ml-2 text-gray-400 hover:text-header
 `;

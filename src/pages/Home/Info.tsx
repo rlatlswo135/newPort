@@ -24,7 +24,13 @@ export const Info = () => {
         <ContentWrap>
           {Object.entries(PROFILE_INFO).map((item) => {
             const [mainTitle, values] = item;
-            return <InfoContent mainTitle={mainTitle} values={values} />;
+            return (
+              <InfoContent
+                mainTitle={mainTitle}
+                values={values}
+                key={`infoContent-${mainTitle}`}
+              />
+            );
           })}
         </ContentWrap>
       </InfoWrap>

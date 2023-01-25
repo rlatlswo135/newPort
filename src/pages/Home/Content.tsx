@@ -18,5 +18,5 @@ const Container = tw.div`
 mt-4
 `;
 const Title = tw.p`
-mb-8 font-bold text-2xl py-6 border-b-1 border-line text-header
+mb-8 font-bold text-2xl py-3 border-b-1 border-line text-header
 `;

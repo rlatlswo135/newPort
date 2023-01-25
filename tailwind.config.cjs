@@ -11,6 +11,7 @@ module.exports = {
         dark: "rgb(17 24 39 / 0.9)",
         light: "rgb(217 119 6)",
         header: "rgb(217 119 6)",
+        sub: "rgb(107 114 128)",
       },
       borderColor: {
         line: "rgb(107 114 128)",

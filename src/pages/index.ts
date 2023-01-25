@@ -1,5 +1,4 @@
-import { Home } from "@pages/Home/Home";
-import { Project } from "@pages/Project";
-import { Portfolio } from "@pages/Portfolio";
+import { Home } from "@pages/home/Home";
+import { Project } from "@pages/project/Project";
 
-export { Home, Project, Portfolio };
+export { Home, Project };
