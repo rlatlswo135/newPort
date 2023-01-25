@@ -36,7 +36,9 @@ text-2xl mb-2 text-header font-bold
 const Content = tw.div`
 flex
 `;
-const Type = tw.p``;
+const Type = tw.p`
+font-bold
+`;
 const Link = tw.a`
 ml-2 text-gray-400 hover:text-header
 `;
