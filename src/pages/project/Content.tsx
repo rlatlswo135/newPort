@@ -11,6 +11,7 @@ export const Content = ({
   date,
   image,
   repo,
+  service,
 }: ContentProps) => {
   return (
     <Container>
@@ -43,11 +44,21 @@ export const Content = ({
               })}
             </div>
           </div>
-          <div className="mt-8">
-            <DetailTitle>Repository</DetailTitle>
-            <Repo href={repo} target="_blank">
-              링크
-            </Repo>
+          <div className="mt-8 flex">
+            <div>
+              <DetailTitle>Repository</DetailTitle>
+              <Repo href={repo} target="_blank">
+                링크
+              </Repo>
+            </div>
+            {service && (
+              <div className="ml-4">
+                <DetailTitle>Service</DetailTitle>
+                <Repo href={service} target="_blank">
+                  링크
+                </Repo>
+              </div>
+            )}
           </div>
         </DetailWrap>
       </ContentWrap>

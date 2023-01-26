@@ -6,7 +6,8 @@ import { Content } from "./Content";
 export const Project = () => {
   const [page, setPage] = useState<number>(0);
 
-  const { repo, title, description, skils, date, image } = PROJECT_INFO[page];
+  const { repo, title, description, skils, date, image, service } =
+    PROJECT_INFO[page];
 
   return (
     <Container>
@@ -18,10 +19,16 @@ export const Project = () => {
         date={date}
         image={image}
         repo={repo}
+        service={service}
       />
       <PageWrap>
         {PROJECT_INFO.map((item, idx) => (
-          <Page page={page} idx={idx} onClick={() => setPage(idx)}>
+          <Page
+            page={page}
+            idx={idx}
+            onClick={() => setPage(idx)}
+            key={`project-${item.title}`}
+          >
             {idx + 1}
           </Page>
         ))}

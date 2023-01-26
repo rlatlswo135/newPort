@@ -23,6 +23,7 @@ export type Project = {
   skils: Skils;
   image: string;
   repo: string;
+  service?: string;
 };
 
 type List = {

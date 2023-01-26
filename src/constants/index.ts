@@ -37,6 +37,7 @@ export const PROJECT_INFO: Project[] = [
     image:
       "https://user-images.githubusercontent.com/81791674/214560303-83396ebc-35ff-43d7-9d6f-6490f9fa9146.png",
     repo: "https://github.com/rlatlswo135/dino",
+    service: "https://rlatlswo135.github.io/dino/",
   },
 ];
 
