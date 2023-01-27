@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { NavInfo } from "@/types";
 
 export const Header = React.memo(() => {
-  const [darkMode, setDarkMode] = useState<boolean>(false);
+  const [darkMode, setDarkMode] = useState<boolean>(true);
 
   const NAV: NavInfo[] = useMemo(
     () => [
