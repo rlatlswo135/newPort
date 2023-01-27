@@ -18,7 +18,11 @@ export const Info = () => {
         {/* 이미지 */}
         <ImageWrap>
           {/* <img alt="이미지 없음"  /> */}
-          <div className="border-2 w-full h-full rounded-full" />
+          <img
+            className="w-full h-full rounded-full"
+            alt="err"
+            src="https://user-images.githubusercontent.com/81791674/214994908-9ce80989-1db2-4d83-a35c-d40e99cf9df9.jpeg"
+          />
         </ImageWrap>
         {/* 컨택트 및 깃허브 + 노션 */}
         <ContentWrap>
