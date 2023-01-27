@@ -16,11 +16,24 @@ export const PROFILE_INFO: Profile = {
 // 프로젝트 정보
 export const PROJECT_INFO: Project[] = [
   {
+    title: "포켓몬 스티커 모으기",
+    description: "Firebase + CRA로 만든 간단한 웹게임",
+    date: "23.01.10 ~ 23.01.27",
+    skils: {
+      Lang: ["TypeScript"],
+      tools: ["React", "Firebase"],
+    },
+    image:
+      "https://user-images.githubusercontent.com/81791674/215073588-d2b7626f-b8f0-47cc-9f0a-35e1425b8858.png",
+    repo: "https://github.com/rlatlswo135/pokemon_master",
+    service: "https://pokemon-master-gk8p.vercel.app/",
+  },
+  {
     title: "Toy Chat",
     description: "Nextron + Firebase로 만든 간단한 채팅App",
     date: "22.01.10 ~ 22.01.20",
     skils: {
-      Lang: ["TypeScript", "JavaScript"],
+      Lang: ["TypeScript"],
       tools: ["Next.js", "Electron", "React", "Firebase"],
     },
     image:

@@ -38,12 +38,12 @@ export const Project = () => {
 };
 
 const Container = tw.div`
-flex flex-col items-center pt-44 pb-24 h-[95.6vh]
+flex flex-col items-center pt-20 pb-24 h-[95.6vh]
 dark:bg-dark dark:text-white
 `;
 
 const Title = tw.p`
-pb-6 text-4xl font-bold border-b-1 border-line mb-24
+pb-6 text-4xl font-bold border-b-1 border-line mb-12
 `;
 
 const PageWrap = tw.footer`
